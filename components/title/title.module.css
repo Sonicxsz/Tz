@@ -1,0 +1,23 @@
+.title{
+    text-align: center;
+    padding-bottom: 50px;
+    width: 100%;
+    
+}
+
+.title h1{
+    font-weight: 700;
+    font-size: 36px;
+}
+
+@media (max-width: 425px) {
+    .title{
+        padding-bottom: 34px;
+    }
+    .title h1{
+        font-weight: 500;
+        font-size: 28px;
+        text-align: start;
+        margin: 0;
+    }
+}

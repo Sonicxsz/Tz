@@ -1,0 +1,116 @@
+.wrapper{
+    color: black;
+    display: flex;
+}
+.module{
+    display: flex;
+    width: 141px;
+    border: none;
+    background: unset;
+    border-top: 3px solid orangered;
+    font-weight: 300;
+    font-size: 30px;
+    padding-top: 29px;
+    margin-right: 81px;
+}
+
+.ulWrapper{
+    width: 365px;
+    font-weight: 300;
+    font-size: 15px;
+    padding-top: 22px;
+}
+.ul{
+    list-style: none;
+}
+.li{
+    margin-top: 10px;
+    line-height: 130%;
+}
+.li::before{
+    content: '\2022';
+    color:red;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+
+@media (max-width: 768px){
+    .ulWrapper{
+        font-size: 23px;
+    }
+    
+}
+
+@media (max-width: 425px) {
+    .ulWrapper{
+        font-weight: 300;
+        font-size: 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: all 0.2s linear;
+        
+    }
+    .ulWrapper_active{
+        max-height: 700px;
+        
+    }
+    .wrapper{
+        display: block;
+        width: 100%;
+    }
+    .module{
+        
+        display: flex;
+        align-items: center;
+        padding: 0;
+        width: 100%;
+        color: #262626;
+        padding-left: 69px;
+        height: 51px;
+        font-weight: 300;
+        font-size: 18px;
+        background: #F7F7F7;
+        transition: all 0.2s linear;
+        position: relative;
+        border: none;
+    }
+    .module::before{
+        display: inline-block;
+        position: absolute;
+        content: '';
+        width: 2px;
+        height: 18px;
+        top: 50%;
+        left: 25px;
+        background: black;
+        transform: translateY(-50%);
+        transition: 0.2s all linear;
+    }
+   
+    .module::after{
+        display: inline-block;
+        position: absolute;
+        content: '';
+        width: 18px;
+        height: 2px;
+        top: 50%;
+        left: 17px;
+        background: black;
+        transform: translateY(-50%);
+    }
+    .module_active::after{
+        background-color: #fff;
+    }
+    .module_active::before{
+        transform: rotate(90deg);
+        top: 32%;
+        background-color: #fff;
+    }
+    .module_active{
+        background: #FF3535;
+        color: white;
+    }
+}

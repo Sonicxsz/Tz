@@ -1,0 +1,40 @@
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 71px;
+    padding: 0 91px;
+    align-items: start;
+    margin-bottom: 68px;
+}
+
+
+.wrapper h2{
+    font-weight: 700;
+    font-size: 26px;
+    margin-bottom: 54px;
+}
+
+
+.itemsWrapper{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+@media (max-width: 425px) {
+   .itemsWrapper{
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+   }
+   .wrapper{
+    padding: 0;
+    width: 100%;
+    margin-bottom: 10px;
+   }
+   .wrapper h2{
+    font-size: 22px;
+    margin: 0 0 26px 0;
+   }
+  }
