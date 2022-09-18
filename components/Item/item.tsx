@@ -10,14 +10,21 @@ function Item({ subject, sec = false }:ItemProps) {
 
   return (
     <div className={styles.wrapper}>
-      <button onClick={() => {
-        setActive(!active)
-      }}
+      <div 
         className={cn(styles.module, {
           [styles.module_active]: active
         })}>
 
         <span>{sec ? '2 модуль' : '1 модуль'}</span>
+      </div>
+      <button 
+        onClick={() => {
+          setActive(!active)
+        }}
+        className={cn(styles.button, {
+          [styles.button_active]: active
+        })}>
+            <span>{sec ? '2 модуль' : '1 модуль'}</span>
       </button>
       <div className={cn(styles.ulWrapper, {
         [styles.ulWrapper_active]: active
